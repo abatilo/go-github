@@ -1,4 +1,4 @@
-module github.com/fleskesvor/throwaway-repo
+module github.com/fleskesvor/go-github
 
 require (
 	github.com/golang/protobuf v1.2.0 // indirect
