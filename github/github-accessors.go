@@ -13027,3 +13027,43 @@ func (w *WeeklyStats) GetWeek() Timestamp {
 	}
 	return *w.Week
 }
+
+// GetAction returns the Action field if it's non-nil, zero value otherwise.
+func (r *RepositoryDispatchEvent) GetAction() string {
+	if r == nil || r.Action == nil {
+		return ""
+	}
+	return *r.Action
+}
+
+// GetBranch returns the Branch field if it's non-nil, zero value otherwise.
+func (r *RepositoryDispatchEvent) GetBranch() string {
+	if r == nil || r.Branch == nil {
+		return ""
+	}
+	return *r.Branch
+}
+
+// GetInstallation returns the Installation field.
+func (r *RepositoryDispatchEvent) GetInstallation() *Installation {
+	if r == nil {
+		return nil
+	}
+	return r.Installation
+}
+
+// GetRepo returns the Repo field.
+func (r *RepositoryDispatchEvent) GetRepo() *Repository {
+	if r == nil {
+		return nil
+	}
+	return r.Repo
+}
+
+// GetSender returns the Sender field.
+func (r *RepositoryDispatchEvent) GetSender() *User {
+	if r == nil {
+		return nil
+	}
+	return r.Sender
+}

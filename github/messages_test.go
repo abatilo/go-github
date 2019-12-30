@@ -343,6 +343,10 @@ func TestParseWebHook(t *testing.T) {
 			payload:     &WatchEvent{},
 			messageType: "watch",
 		},
+		{
+			payload:     &RepositoryDispatchEvent{},
+			messageType: "repository_dispatch",
+		},
 	}
 
 	for _, test := range tests {

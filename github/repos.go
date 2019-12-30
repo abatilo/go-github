@@ -7,6 +7,7 @@ package github
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"strings"
 )
@@ -1326,6 +1327,9 @@ func (s *RepositoriesService) Transfer(ctx context.Context, owner, repo string, 
 type DispatchRequestOptions struct {
 	// EventType is a custom webhook event name. (Required.)
 	EventType string `json:"event_type"`
+	// ClientPayload is a custom JSON payload with extra information about the webhook event.
+	// Defaults to an empty JSON object.
+	ClientPayload json.RawMessage `json:"client_payload"`
 }
 
 // Dispatch triggers a repository_dispatch event in a GitHub Actions workflow.
